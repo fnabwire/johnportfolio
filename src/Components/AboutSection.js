@@ -41,7 +41,7 @@ const sectionStyle = {
   margin: 'auto',
   height: '55vh',
   textAlign: 'center',
-  borderRadius: '5px',
+  borderRadius: '20px',
 }
 
 const containerStyle = {

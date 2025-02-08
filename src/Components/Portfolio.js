@@ -42,7 +42,7 @@ import image36 from '../Images/image36.jpg'
 import image37 from '../Images/image37.jpg'
 import image38 from '../Images/image38.jpg'
 import image39 from '../Images/image39.jpg'
-import image40 from '../Images/image40.jpg'
+
 
 
 
@@ -86,61 +86,70 @@ const projects = [
   { id: 37, image: image37, category: 'Photo Manipulation' },
   { id: 38, image: image38, category: 'Logo Design' },
   { id: 39, image: image39, category: 'Brand Identity' },
-  { id: 40, image: image40, category: 'Business Card' },
+  
 ]
 
 export default function PortfolioSection() {
-  const { ref } = useInView({
-      triggerOnce: true,
-  })
+  const { ref } = useInView({ triggerOnce: true })
+  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [modalImage, setModalImage] = useState(null) // State to handle popup image
 
-  const [selectedCategory, setSelectedCategory] = useState('All'); // State for selected category
+  const categories = ['All', ...new Set(projects.map(project => project.category))]
+  const filteredProjects =
+    selectedCategory === 'All' ? projects : projects.filter(project => project.category === selectedCategory)
 
-  const categories = ['All', ...new Set(projects.map(project => project.category))]; // Unique categories
-
-  const filteredProjects = selectedCategory === 'All' ? projects : projects.filter(project => project.category === selectedCategory);
-
-  // Group projects by category using filtered projects)
   const projectsByCategory = filteredProjects.reduce((acc, project) => {
-      if (!acc[project.category]) {
-          acc[project.category] = [];
-      }
-      acc[project.category].push(project);
-      return acc;
-  }, {});
+    if (!acc[project.category]) acc[project.category] = []
+    acc[project.category].push(project)
+    return acc
+  }, {})
 
   return (
-      <section ref={ref} style={sectionStyle}>
-          {/* Category Buttons */}
-          <div style={categoryButtonStyle}>
-              {categories.map(category => (
-                  <button
-                      key={category}
-                      style={selectedCategory === category ? activeButtonStyle : buttonStyle}
-                      onClick={() => setSelectedCategory(category)}
-                  >
-                      {category}
-                  </button>
-              ))}
-          </div>
+    <section ref={ref} style={sectionStyle}>
+      {/* Category Buttons */}
+      <div style={categoryButtonStyle}>
+        {categories.map(category => (
+          <button
+            key={category}
+            style={selectedCategory === category ? activeButtonStyle : buttonStyle}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
 
-
-          {Object.entries(projectsByCategory).map(([category, categoryProjects]) => (
-              <div key={category} style={category === selectedCategory || selectedCategory === 'All' ? {} : {display: 'none'}}> {/* Conditionally render category */}
-                  <h2 style={categoryTitleStyle}>{category}</h2>
-                  <div style={portfolioStyle}>
-                      {categoryProjects.map((project) => (
-                          <div key={project.id} style={projectStyle}>
-                              <img src={project.image} alt={project.title} style={imageStyle} />
-                              <h3 style={titleStyle}>{project.title}</h3>
-                          </div>
-                      ))}
-                  </div>
+      {/* Display projects by category */}
+      {Object.entries(projectsByCategory).map(([category, categoryProjects]) => (
+        <div key={category} style={category === selectedCategory || selectedCategory === 'All' ? {} : { display: 'none' }}>
+          <h2 style={categoryTitleStyle}>{category}</h2>
+          <div style={portfolioStyle}>
+            {categoryProjects.map(project => (
+              <div key={project.id} style={projectStyle}>
+                <img
+                  src={project.image}
+                  alt={`Project ${project.id}`}
+                  style={imageStyle}
+                  onClick={() => setModalImage(project.image)} // Open modal on click
+                />
               </div>
-          ))}
-      </section>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      {/* Modal for image preview */}
+      {modalImage && (
+        <div style={modalOverlayStyle} onClick={() => setModalImage(null)}>
+          <div style={modalContentStyle}>
+            <img src={modalImage} alt="Preview" style={modalImageStyle} />
+          </div>
+        </div>
+      )}
+    </section>
   )
 }
+
 
 
 // Styles
@@ -211,6 +220,31 @@ const categoryTitleStyle = {
   textAlign: 'center',
 };
 
+const modalOverlayStyle = {
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '100%',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.8)',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  zIndex: 1000,
+}
+
+const modalContentStyle = {
+  maxWidth: '90%',
+  maxHeight: '90%',
+}
+
+const modalImageStyle = {
+  width: '40%',
+  height: '50%',
+  borderRadius: '5px',
+  align: 'center',
+  boxShadow: '0 4px 10px rgba(255, 255, 255, 0.2)',
+}
 
 const responsiveStyles = `
   @media (max-width: 768px) {
