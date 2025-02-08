@@ -39,6 +39,10 @@ import image33 from '../Images/image33.jpg'
 import image34 from '../Images/image34.jpg'
 import image35 from '../Images/image35.jpg'
 import image36 from '../Images/image36.jpg'
+import image37 from '../Images/image37.jpg'
+import image38 from '../Images/image38.jpg'
+import image39 from '../Images/image39.jpg'
+import image40 from '../Images/image40.jpg'
 
 
 
@@ -79,6 +83,10 @@ const projects = [
   { id: 34, image: image34, category: 'Brand Design' },
   { id: 35, image: image35, category: 'Brand Identity' },
   { id: 36, image: image36, category: 'Brand Identity' },
+  { id: 37, image: image37, category: 'Photo Manipulation' },
+  { id: 38, image: image38, category: 'Logo Design' },
+  { id: 39, image: image39, category: 'Brand Identity' },
+  { id: 40, image: image40, category: 'Business Card' },
 ]
 
 export default function PortfolioSection() {
