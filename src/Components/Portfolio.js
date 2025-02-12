@@ -42,7 +42,11 @@ import image36 from '../Images/image36.jpg'
 import image37 from '../Images/image37.jpg'
 import image38 from '../Images/image38.jpg'
 import image39 from '../Images/image39.jpg'
-
+import image40 from '../Images/image40.jpg'
+import image41 from '../Images/image41.jpg'
+import image42 from '../Images/image42.jpg'
+import image43 from '../Images/image43.jpg'
+import image44 from '../Images/image44.jpg'
 
 
 
@@ -86,6 +90,12 @@ const projects = [
   { id: 37, image: image37, category: 'Photo Manipulation' },
   { id: 38, image: image38, category: 'Logo Design' },
   { id: 39, image: image39, category: 'Brand Identity' },
+  { id: 40, image: image40, category: 'Advertising' },
+  { id: 41, image: image41, category: 'Advertising' },
+  { id: 42, image: image42, category: 'Advertising' },
+  { id: 43, image: image43, category: 'Advertising' },
+  { id: 44, image: image44, category: 'Advertising' },
+
   
 ]
 

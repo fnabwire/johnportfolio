@@ -42,7 +42,7 @@ const Resume = () => {
   const education = [
     {
       id: 1,
-      year: "2021 - Now",
+      year: "2021 - 2025",
       title: "Bachelor of Technology in Computer and Electronic Systems Engineering",
       institution: "Mount Kenya University",
       description:
@@ -60,7 +60,7 @@ const Resume = () => {
 
   return (
     <div className="resume-container">
-      <h2 className="resume-title">My Resume</h2>
+      <h2 className="resume-title">MY RESUME</h2>
 
       <div style={buttonContainerStyles}>
           <a button style={ctaButtonStyle}         
@@ -71,7 +71,7 @@ const Resume = () => {
       <div className="resume-sections">
         {/* Experiences */}
         <div className="resume-section">
-          <h3 className="section-title">Experiences</h3>
+          <h3 className="section-title">Experience</h3>
           <div className="timeline">
             {experiences.map((exp) => (
               <div key={exp.id} className="timeline-item">
@@ -134,6 +134,7 @@ const css = `
   font-size: 1rem;
   cursor: pointer;
   border-radius: 5px;
+  text decoration: none;
 }
 
 .resume-sections {

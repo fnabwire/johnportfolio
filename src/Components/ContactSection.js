@@ -74,7 +74,7 @@ const textStyle = {
 const mediaQueries = `
   @media (max-width: 1024px) {
     .contact-container {
-      gap: 100px;
+      gap: 80px;
     }
 
     .contact-item {
@@ -85,7 +85,7 @@ const mediaQueries = `
   @media (max-width: 768px) {
     .contact-container {
       flex-direction: column;
-      gap: 40px;
+      gap: 30px;
       align-items: center;
     }
 
@@ -97,7 +97,7 @@ const mediaQueries = `
   @media (max-width: 480px) {
     .contact-container {
       flex-direction: column;
-      gap: 30px;
+      gap: 15px;
       align-items: center;
     }
 

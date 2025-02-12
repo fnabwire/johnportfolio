@@ -2,14 +2,14 @@
 
 import React from 'react'
 import { useInView } from 'react-intersection-observer'
-import image20 from '../Images/image20.jpg'
-import image37 from '../Images/image37.jpg'
+import image41 from '../Images/image41.jpg'
+import image42 from '../Images/image42.jpg'
 import image15 from '../Images/image15.jpg'
 import image27 from '../Images/image27.jpg'
 
 const projects = [
-  { id: 1, image: image20, },
-  { id: 2, image: image37,  },
+  { id: 1, image: image41, },
+  { id: 2, image: image42,  },
   { id: 3, image: image15,  },
   { id: 4, image: image27,  },
 ]
