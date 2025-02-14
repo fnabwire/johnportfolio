@@ -47,6 +47,9 @@ import image41 from '../Images/image41.jpg'
 import image42 from '../Images/image42.jpg'
 import image43 from '../Images/image43.jpg'
 import image44 from '../Images/image44.jpg'
+import image45 from '../Images/image45.jpg'
+import image46 from '../Images/image46.jpg'
+
 
 
 
@@ -95,6 +98,8 @@ const projects = [
   { id: 42, image: image42, category: 'Advertising' },
   { id: 43, image: image43, category: 'Advertising' },
   { id: 44, image: image44, category: 'Advertising' },
+  { id: 45, image: image45, category: 'Logo Design' },
+  { id: 46, image: image46, category: 'Logo Design' },
 
   
 ]
@@ -172,7 +177,7 @@ const categoryButtonStyle = {
 };
 
 const buttonStyle = {
-  backgroundColor: '#98760B',
+  backgroundColor: ' #98760B',
   color: '#fff',
   border: 'none',
   padding: '10px 20px',
@@ -188,7 +193,7 @@ const activeButtonStyle = {
 };
 
 const sectionStyle = {
-  backgroundColor: '#032825',
+  backgroundColor: ' #032825',
   padding: '60px',
   borderRadius: '5px',
  
@@ -218,11 +223,11 @@ const imageStyle = {
 
 const titleStyle = {
   marginTop: '10px',
-  color: '#98760B',
+  color: ' #98760B',
 };
 
 const categoryTitleStyle = {
-  color: 'white',
+  color: ' #f5f5dc',
   fontSize: '1.5em',
   fontWeight: 'bold',
   marginTop: '20px',

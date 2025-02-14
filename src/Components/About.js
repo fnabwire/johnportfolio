@@ -34,7 +34,7 @@ export default function AboutSection() {
 }
 
 const sectionStyle = {
-  backgroundColor: '#f5f5dc',
+  backgroundColor:  ' #f5f5dc',
   padding: '20px 0',
 }
 
@@ -49,7 +49,7 @@ const headingStyle = {
   fontSize: '3rem',
   fontWeight: 'bold',
   marginBottom: '10px',
-  color: '#032825',
+  color: ' #032825',
   align: 'justify',
 }
 

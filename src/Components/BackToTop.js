@@ -43,7 +43,7 @@ const css = `
   bottom: 20px;
   right: 20px;
   background-color: #98760B;
-  color: white;
+  color: #032825;
   padding: 15px 20px; 
   border-radius: 8px;
   border: none; 
@@ -62,7 +62,7 @@ const css = `
 }
 
 .back-to-top .fa-chevron-up {
-  color: black; 
+  color: #032825; 
   font-size: 20px; 
 `;
 
