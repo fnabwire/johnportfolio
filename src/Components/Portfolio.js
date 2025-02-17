@@ -49,6 +49,9 @@ import image43 from '../Images/image43.jpg'
 import image44 from '../Images/image44.jpg'
 import image45 from '../Images/image45.jpg'
 import image46 from '../Images/image46.jpg'
+import image47 from '../Images/image47.jpg'
+import image48 from '../Images/image48.jpg'
+import image49 from '../Images/image49.jpg'
 
 
 
@@ -99,7 +102,11 @@ const projects = [
   { id: 43, image: image43, category: 'Advertising' },
   { id: 44, image: image44, category: 'Advertising' },
   { id: 45, image: image45, category: 'Logo Design' },
-  { id: 46, image: image46, category: 'Logo Design' },
+  { id: 46, image: image46, category: 'Brand Identity' },
+  { id: 47, image: image47, category: 'Brand Identity' },
+  { id: 48, image: image48, category: 'Logo Design' },
+  { id: 49, image: image49, category: 'Logo Design' },
+
 
   
 ]
@@ -155,17 +162,43 @@ export default function PortfolioSection() {
 
       {/* Modal for image preview */}
       {modalImage && (
-        <div style={modalOverlayStyle} onClick={() => setModalImage(null)}>
-          <div style={modalContentStyle}>
+    <div style={modalOverlayStyle} onClick={() => setModalImage(null)}>
+        <div style={{...modalContentStyle, display: 'flex', alignItems: 'center'}}> 
             <img src={modalImage} alt="Preview" style={modalImageStyle} />
-          </div>
+            
+            {/* <div style={{marginLeft: '20px'}}> 
+                <p style={{ color: 'white', textAlign: 'justify' }}>This design was inspired by a partnership.</p>
+                <div style={buttonContainerStyles}>
+                    <button style={ctaButtonStyle} onClick={() => setModalImage(null)}> 
+                        Back
+                    </button>
+                </div>
+            </div> */}
+
         </div>
-      )}
+    </div>
+)}
     </section>
   )
 }
 
 
+// const buttonContainerStyles = {
+//   display: "flex",
+//   justifyContent: "center",
+//   gap: "1em",
+  
+// }
+// const ctaButtonStyle = {
+//   marginTop: '20px',
+//   padding: '10px 20px',
+//   backgroundColor: '#98760B',
+//   color:'#032825',
+//   border: 'none',
+//   borderRadius: '5px',
+//   cursor: 'pointer',
+//   fontWeight: "600",
+// }
 
 // Styles
 const categoryButtonStyle = {
