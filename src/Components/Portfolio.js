@@ -52,6 +52,10 @@ import image46 from '../Images/image46.jpg'
 import image47 from '../Images/image47.jpg'
 import image48 from '../Images/image48.jpg'
 import image49 from '../Images/image49.jpg'
+import image50 from '../Images/image50.jpg'
+import image51 from '../Images/image51.jpg'
+import image52 from '../Images/image52.jpg'
+import image53 from '../Images/image53.jpg'
 
 
 
@@ -106,6 +110,10 @@ const projects = [
   { id: 47, image: image47, category: 'Brand Identity' },
   { id: 48, image: image48, category: 'Logo Design' },
   { id: 49, image: image49, category: 'Logo Design' },
+  { id: 50, image: image50, category: 'Brand Design' },
+  { id: 51, image: image51, category: 'Brand Design' },
+  { id: 52, image: image52, category: 'Brand Design' },
+  { id: 53, image: image53, category: 'Advertising' },
 
 
   
@@ -128,6 +136,7 @@ export default function PortfolioSection() {
 
   return (
     <section ref={ref} style={sectionStyle}>
+      
       {/* Category Buttons */}
       <div style={categoryButtonStyle}>
         {categories.map(category => (

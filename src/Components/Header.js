@@ -62,7 +62,7 @@ const css = `
   padding: 1em;
   color: #032825;
   width: 100%;
-  position: non-stickey;
+  position: stickey;
   top: 0;
   left: 0;
   z-index: 1000;
