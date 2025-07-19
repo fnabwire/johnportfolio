@@ -42,7 +42,7 @@ const Resume = () => {
   const education = [
     {
       id: 1,
-      year: "2021 - 2025",
+      year: "GRADUATED",
       title: "Bachelor of Technology in Computer and Electronic Systems Engineering",
       institution: "Mount Kenya University",
       description:
